@@ -39,13 +39,19 @@
         $angka = $_POST['dua'];
         
         echo "<br>";
-        for($x = $angka; $x >= 1; $x--){
-          for($y = $angka; $y > $x; $y--){
+        $a = $angka;
+        while($a >= 1){
+          $b = $angka;
+          while($b > $a){
             echo "&nbsp";
+            $b--;
           }
-          for($z = 1; $z <= $x; $z++){
-            echo "$z ";
+          $c = 1;
+          while($c <= $a){
+            echo "$c ";
+            $c++;
           }
+          $a--;
           echo "<br>";
         }
       }
